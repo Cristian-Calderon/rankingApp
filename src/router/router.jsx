@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom" 
-import { Companys } from "../components/Companys";
+import { Companys } from "../components/companys/Companys";
 
 
 const Router = () =>{

@@ -1,0 +1,10 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #2B6C7E;
+    text-align: center;
+}
+.about{
+    color: white;
+    text-align: justify;
+}

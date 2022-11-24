@@ -1,0 +1,155 @@
+.init-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-apps{
+    background-color: #2B6C7E;
+    color: white;
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 0 15px 0 15px;
+}
+.btn-apps:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+                 inset -4px -4px 6px 0 rgba(255,255,255,.2),
+                 inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+.decorative-div{
+    height: 150px;
+    width: 150px;
+    background-color:#ffffff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 470px;
+    z-index: 2;
+}
+.logo-home{
+   width: 150px;
+   height: 150px;   
+}
+.head-div{
+    background-color: #FE651A;
+    height: 300px;
+    width: 300px;
+    border-radius: 0 0 40px 40px;
+}
+.circle-1{
+    height: 100px;
+    width: 100px;
+    background-color: #ff8649;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 200px;
+    left: 200px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+      margin-bottom: 10%;
+    }
+  
+    to {
+      margin-bottom: 0%;
+    }
+}
+.circle-2{
+    height: 200px;
+    width: 200px;
+    background-color: #ff5500;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    bottom: 200px;
+    right: 180px;
+    animation-duration: 6s;
+    animation-name: slidein2;
+}
+@keyframes slidein2 {
+    from {
+      margin-right: 10%;
+    }
+  
+    to {
+      margin-right: 0%;
+    }
+}
+@media screen and (min-width:375px) {
+    .head-div{
+        width: 340px;
+    }
+    .btn-apps{
+        width: 340px;
+    }
+}
+@media screen and (min-width:425px){
+    .head-div{
+        width: 360px;
+    }
+    .btn-apps{
+        width: 360px;
+    }
+}
+@media screen and (min-width:768px){
+    .head-div{
+        width: 560px;
+        border-radius: 0 0 50px 50px;
+    }
+    .btn-apps{
+        width: 460px;
+    }
+}
+@media screen and (min-width:1024px){
+    .head-div{
+        width: 1000px;
+        border-radius: 0 0 50px 50px;
+    }
+    .btn-apps{
+        width: 460px;
+    }
+    .welcome{
+        font-size: 30px;
+        color: #2B6C7E;
+    }
+    .where{
+        font-size: 20px;
+        color: #2B6C7E;
+    }
+    .decorative-div{
+        width: 200px;
+        height: 200px;
+    }
+    .logo-home{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media screen and (max-width:320px){
+.circle-1{
+    display: none;
+}
+.circle-2{
+    display: none;
+}
+}
+@media screen and (max-width:375px){
+    .circle-1{
+        display: none;
+    }
+    .circle-2{
+        display: none;
+    }
+}
+@media screen and (max-width:425px){
+    .circle-1{
+        display: none;
+    }
+    .circle-2{
+        display: none;
+    }
+}

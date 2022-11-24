@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+  } from "react-router-dom"
+  import Home from "./components/vistas/home/Home"
+  import Top from "./components/vistas/topapps/Top"
+  import Top2 from "./components/vistas/topapps/Top2"
+  import Medium from "./components/vistas/mediumapps/Medium"
+  import Medium2 from "./components/vistas/mediumapps/Medium2"
+  import Worst from "./components/vistas/worstapps/Worst"
+  import Worst2 from "./components/vistas/worstapps/Worst2"
+
+  function App() {
+      return ( <div className = "App" >
+         <Router>
+          <Routes>
+              <Route exact path="/" element={<Home/>}/>
+              <Route exact path="/Top" element={<Top/>}/>
+              <Route exact path="/Top2" element={<Top2/>}/>
+              <Route exact path="/Medium" element={<Medium/>}/>
+              <Route exact path="/Medium2" element={<Medium2/>}/>
+              <Route exact path="/Worst" element={<Worst/>}/>
+              <Route exact path="/Worst2" element={<Worst2/>}/>
+          </Routes>
+         </Router>
+           </div>
+      );
+  }
+  
+  export default App;
+

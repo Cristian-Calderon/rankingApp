@@ -1,9 +1,11 @@
 import React from "react";
 import "../nav/Nav.css";
-import logo from "../../assets/img/logo.svg"
+import TextField from "@mui/material/TextField";
+import logo from "../../assets/img/logo.svg";
 const NavBar = () => {
   return (
-     <div className="navBody"><img src={logo} alt="" />
+    <div className="navBody">
+      <img src={logo} alt="" />
       <input type="checkbox" id="navi-toggle" class="checkbox" />
       <label for="navi-toggle" class="button">
         <span class="icon">&nbsp;</span>
@@ -12,29 +14,34 @@ const NavBar = () => {
 
       <nav class="nav">
         <ul class="list">
+         
+            <div className="search">
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                fullWidth
+                label="Search"
+
+              />
+            </div>
+          
           <li class="item">
-            {" "}
-            <a class="link"> Link 1 </a>{" "}
+            <button class="link">Home</button>
           </li>
           <li class="item">
-            {" "}
-            <a class="link"> Link 2 </a>{" "}
+            <button class="link"> Top 10 </button>
           </li>
           <li class="item">
-            {" "}
-            <a class="link"> Link 4 </a>{" "}
+            <button class="link">Create new </button>
           </li>
           <li class="item">
-            {" "}
-            <a class="link"> Link 5 </a>{" "}
-          </li>
-          <li class="item">
-            {" "}
-            <a class="link"> Link 6 </a>{" "}
+            <p class="linkDos">About us</p>
+            <p class="linkDos">Contact</p>
+            <p class="linkDos">Legal</p>
           </li>
         </ul>
       </nav>
-     </div> 
+    </div>
   );
 };
 

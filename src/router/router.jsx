@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom" 
-import { Companys } from "../components/Companys";
+
+import Createapp from "../components/Create/Createapp";
 
 
 const Router = () =>{
@@ -8,7 +9,8 @@ const Router = () =>{
         <BrowserRouter>
         <Routes>
             {/* path direccion */}
-            <Route path="/" element= {<Companys/>}/>
+            <Route path="/" element = {<Createapp/>}/>
+
             {/* <Route path="*" element= {<NotFoundPage/>}/> */}
         </Routes>
         </BrowserRouter>

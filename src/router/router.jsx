@@ -6,11 +6,13 @@ import { Companys } from "../components/companys/Companys";
 const Router = () =>{
     return(
         <BrowserRouter>
+
         <Routes>
             {/* path direccion */}
             <Route path="/" element= {<Companys/>}/>
             {/* <Route path="*" element= {<NotFoundPage/>}/> */}
         </Routes>
+        
         </BrowserRouter>
     );
 }

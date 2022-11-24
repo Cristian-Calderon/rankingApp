@@ -3,6 +3,11 @@ p{
     padding: 0;
 }
 
+.pding{
+    padding: 10px 10px;
+    text-align: justify;
+}
+
 .companys{
     width: 100%;
     display: flex;
@@ -32,6 +37,13 @@ p{
     align-items:flex-start;
 }
 
+.star-cont{
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+
 .parragraph-comment{
     color: black;
 }
@@ -56,6 +68,7 @@ p{
     border: none;
     background-color: #F0F5F9;
 }
+
 /*
 Media:
 320
@@ -64,14 +77,27 @@ Media:
 768
 1024 
  */
-@media (min-width: 320px) {
-    
-}
 
 @media (min-width: 375px) {
-
+    .container{
+        width: 84%;
+    }
 }
 
 @media (min-width: 425px) {
+    .container{
+        width: 80%;
+    }
+}
 
+@media (min-width: 768px) {
+    .container{
+        width: 76%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container{
+        width: 74%;
+    }
 }

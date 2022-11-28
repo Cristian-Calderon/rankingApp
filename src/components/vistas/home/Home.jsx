@@ -1,14 +1,13 @@
 import React from 'react'
 import '../../styles/home.css'
 import {Link} from "react-router-dom"
-import imagen from '../../../images/logoranking-removebg-preview(1).png';
-import NavBar from '../../nav/Nav'
+
+
 
 
 export const Home = () => {
   return (
     <div>
-      <div><NavBar/></div>
           <div className='init-div'>
           <div className='home-div bg-animado-blue'>
           <h2 className='welcome'>Welcome to RankingApp</h2>

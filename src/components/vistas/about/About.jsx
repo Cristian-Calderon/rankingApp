@@ -1,11 +1,10 @@
 import React from 'react'
 import '../../styles/about.css'
-import NavBar from '../../nav/Nav'
+
 
 export const About = () => {
   return (
     <div>
-      <div><NavBar/></div>
       <div className='about-container'>
       <div className='about'>
        <h2>About Us</h2>

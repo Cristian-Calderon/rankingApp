@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/top.css'
 import {Link} from "react-router-dom"
-import NavBar from '../../nav/Nav'
+
 
 
 
@@ -10,7 +10,6 @@ import NavBar from '../../nav/Nav'
 export const Worst2 = () => {
   return (
     <div>
-      <div><NavBar/></div>
        <div>
          <h2 className='h-1-top-apps'>Worst Apps</h2>
        </div>

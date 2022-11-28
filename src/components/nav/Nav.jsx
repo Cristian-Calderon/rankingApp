@@ -16,31 +16,26 @@ const NavBar = () => {
 
       <nav class="nav">
         <ul class="list">
-         
             <div className="search">
               <TextField
                 id="outlined-basic"
                 variant="outlined"
                 fullWidth
-                label="Search"
-
-              />
+                label="Search"/>
             </div>
           
           <li class="item">
             <NavLink to="/"><button class="link">Home</button></NavLink> 
           </li>
           <li class="item">
-            <NavLink to="/companys"><button class="link"> Top 10 </button></NavLink>
+            <NavLink to="/"><button class="link"> Top 10 </button></NavLink>
             
           </li>
           <li class="item">
-            <NavLink to="/"><button class="link">Create new </button></NavLink>
+            <NavLink to="/createapp"><button class="link">Create new </button></NavLink>
           </li>
           <li class="item">
-            <NavLink to="/"><p class="linkDos">About us</p></NavLink>
-            <p class="linkDos">Contact</p>
-            <p class="linkDos">Legal</p>
+            <NavLink to="/About"><p class="linkDos">About us</p></NavLink>
           </li>
         </ul>
       </nav>

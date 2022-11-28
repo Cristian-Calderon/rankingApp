@@ -1,10 +1,12 @@
 import './App.css';
-import Router from './router/router';
+import NavBar from '../src/components/nav/Nav.jsx';
+import Createapp from '../src/components/Create/Createapp';
 
 function App() {
   return (
     <div>
-      <Router></Router>
+      <NavBar/>
+      <Createapp/>
     </div>
   );
 }

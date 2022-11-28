@@ -1,5 +1,5 @@
 import React, { useState }  from 'react';
-import '../../styles/index.css';
+import '../style/index.css'
 import './createapp.css';
 
 import Titleapp from './Titleapp';

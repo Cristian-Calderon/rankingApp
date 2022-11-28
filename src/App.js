@@ -1,12 +1,12 @@
-import './App.css';
-import NavBar from '../src/components/nav/Nav.jsx';
-import Createapp from '../src/components/Create/Createapp';
+import './components/style/index.css'
+import Router from './router/Router';
+import React from "react";
+
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <Createapp/>
+      <Router></Router>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/index.css';
+import '../style/index.css';
 import './createapp.css';
 
 const Titleapp = () => {

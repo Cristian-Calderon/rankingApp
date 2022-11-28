@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../styles/top.css'
 import {Link} from "react-router-dom"
+import NavBar from '../../nav/Nav'
 
 
 
@@ -9,9 +10,10 @@ import {Link} from "react-router-dom"
 export const Top2 = () => {
   return (
     <div>
+      <div><NavBar/></div>
       <div><h2 className='h-1-top-apps'>Top apps</h2></div>
-      <p className='stars-rank'><b>4</b> <em>Stars</em></p>
-      <p>Tap each one for more details</p>
+       <p className='tap'>Tap each one for more details</p>
+       <p className='click'>Click each one for more details</p>
        <div className='top-container'>
            <div className='best-apps'></div>
            <div className='best-apps'></div>

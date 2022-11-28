@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/top.css'
 import {Link} from "react-router-dom"
 import imagen3 from '../../../images/Telegram_logo.svg.png';
+import NavBar from '../../nav/Nav'
 
 
 
@@ -9,9 +10,11 @@ import imagen3 from '../../../images/Telegram_logo.svg.png';
 export const Medium = () => {
   return (
     <div>
+      <div><NavBar/></div>
       <div><h2 className='h-1-top-apps'>Medium Apps</h2>
-      <p className='stars-rank'><b>3.5</b><em>Stars</em></p></div>
-      <p>Tap each one for more details</p>
+      </div>
+      <p className='tap'>Tap each one for more details</p>
+       <p className='click'>Click each one for more details</p>
        <div className='top-container'>
            <div className='best-apps'>
            <img src={imagen3} className="logo-twit" />

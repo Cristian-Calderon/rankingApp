@@ -5,8 +5,7 @@
     align-items: center;
 }
 .h-1-top-apps{
-    margin-top: 40px;
-    margin-bottom: 5px;
+    margin-top: 10px;
 }
 .best-apps{
     height: 120px;
@@ -18,7 +17,7 @@
     background-color: #2B6C7E;
     color: white;
     border: none;
-    margin: 30px;
+    margin: 10px;
     height: 30px;
     width: 80px;
 }
@@ -75,5 +74,30 @@
     .next-top-apps{
         height: 50px;
         width: 250px;
+    }
+}
+@media screen and (max-width:320px){
+.click{
+    display: none;
+}
+}
+@media screen and (max-width:375px){
+    .click{
+        display: none;
+    }
+}
+@media screen and (max-width:425px){
+    .click{
+        display: none;
+    }
+ }
+ @media screen and (max-width:768px){
+    .click{
+        display: none;
+    }
+}
+@media screen and (min-width:1024px){
+    .tap{
+        display: none;
     }
 }

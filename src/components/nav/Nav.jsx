@@ -1,8 +1,8 @@
 import React from "react";
-import "../nav/Nav.css";
+import "./Nav.css";
 import TextField from "@mui/material/TextField";
 import logo from "../../assets/img/logo.svg";
-import {Link} from "react-router-dom"
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
   return (
@@ -25,16 +25,19 @@ const NavBar = () => {
             </div>
           
           <li class="item">
-          <Link to="/"><button class="link">Home</button></Link>
+            <NavLink to="/"><button class="link">Home</button></NavLink> 
           </li>
           <li class="item">
-            <button class="link"> Top 10 </button>
+            <NavLink to="/companys"><button class="link"> Top 10 </button></NavLink>
+            
           </li>
           <li class="item">
-            <button class="link">Create new </button>
+            <NavLink to="/"><button class="link">Create new </button></NavLink>
           </li>
           <li class="item">
-          <Link to="/About" className="link-about"><p class="linkDos">About us</p></Link>
+            <NavLink to="/"><p class="linkDos">About us</p></NavLink>
+            <p class="linkDos">Contact</p>
+            <p class="linkDos">Legal</p>
           </li>
         </ul>
       </nav>

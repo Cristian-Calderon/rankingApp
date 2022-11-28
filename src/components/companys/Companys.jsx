@@ -1,6 +1,6 @@
 import React from 'react'
-import './companys.css'
-import imgexample from '../../imgc/imgexample.png'
+import '../style/companys.css'
+import imgexample from '../../assets/img/imgexample.png'
 import { StarPuntation } from '../startpuntation/StarPuntation'
 
 export const Companys = () => {

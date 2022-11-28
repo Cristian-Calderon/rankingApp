@@ -12,6 +12,8 @@ import Worst from "../components/vistas/worstapps/Worst"
 import Worst2 from "../components/vistas/worstapps/Worst2"
 import About from "../components/vistas/about/About"
 import Createapp from "../components/Create/Createapp"
+import { Rank } from "../components/Rank/Rank";
+
 const Router = () =>{
     return(
         <BrowserRouter>
@@ -28,7 +30,9 @@ const Router = () =>{
             <Route path="/About" element= {<About/>}/>
             <Route path="/Createapp" element= {<Createapp/>}/>
             
-            <Route path="/companys" element= {<Companys/>} /> 
+            <Route path="/companys" element= {<Companys/>} />
+            <Route path="/rank" element= {<Rank/>} />
+            
         </Routes>
         
         </BrowserRouter>

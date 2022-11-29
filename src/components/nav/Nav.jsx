@@ -8,12 +8,20 @@ const NavBar = () => {
   return (
     <div className="navBody">
       <img src={logo} alt="" />
+      <div className="menuDesktop">
+        <div className="linkDesktop">
+      <NavLink className='linTres' to="/"><div class="linTres">Home</div></NavLink> 
+      <NavLink className='linTres' to="/"><div class="linTres"> Top 10 </div></NavLink>
+      <NavLink className='linTres'to="/createapp"><div class="linTres">Create new </div></NavLink>
+      <NavLink className='linTres' to="/About"><p class="linTres">About us</p></NavLink>
+      </div>
+      </div>
+      <div className="menuBurger">
       <input type="checkbox" id="navi-toggle" class="checkbox" />
       <label for="navi-toggle" class="button">
         <span class="icon">&nbsp;</span>
       </label>
       <div class="background">&nbsp;</div>
-
       <nav class="nav">
         <ul class="list">
             <div className="search">
@@ -39,6 +47,7 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
+     </div>
     </div>
   );
 };

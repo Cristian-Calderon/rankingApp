@@ -27,8 +27,9 @@ return <div>
             {results.map((item, index) => (
                 <li key={item.id} className='best-apps'>
                     {item.Column1}
-                    <img src={item.Column3} alt="2"/>
-                    <span>{item.Column2}</span>
+                    <img className='imgCard' src={item.Column3} alt="2"/>
+                    <span className='' >{item.Column2}</span>
+                    <span className='' >{item.Column4}</span>
                     </li>
             ))}
   </ul>

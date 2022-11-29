@@ -1,0 +1,103 @@
+.top-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.h-1-top-apps{
+    margin-top: 10px;
+}
+.best-apps{
+    height: 120px;
+    width: 140px;
+    background-color: orange;
+    margin: 5px;
+}
+.next-top-apps{
+    background-color: #2B6C7E;
+    color: white;
+    border: none;
+    margin: 10px;
+    height: 30px;
+    width: 80px;
+}
+.next-top-apps:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+                 inset -4px -4px 6px 0 rgba(255,255,255,.2),
+                 inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+.logo-twit{
+    width: 100%;
+    height: 100%;
+}
+.stars-rank{
+    margin-bottom: 5px;
+}
+@media screen and (min-width:375px){
+    .best-apps{
+       width: 150px;
+       margin-left: 20px;
+    }
+    .next-top-apps{
+        height: 35px;
+        width: 85px;
+    }
+}
+@media screen and (min-width:425px){
+    .best-apps{
+       width: 180px;
+       margin-left: 10px;
+    }
+    .next-top-apps{
+        height: 40px;
+        width: 90px;
+    }
+}
+@media screen and (min-width:768px){
+    .best-apps{
+       width: 200px;
+       height: 200px;
+       margin-left: 20px;
+    }
+    .next-top-apps{
+        height: 40px;
+        width: 200px;
+    }
+}
+@media screen and (min-width:1024px){
+    .best-apps{
+       width: 210px;
+       height: 210px;
+       margin-left: 20px;
+    }
+    .next-top-apps{
+        height: 50px;
+        width: 250px;
+    }
+}
+@media screen and (max-width:320px){
+.click{
+    display: none;
+}
+}
+@media screen and (max-width:375px){
+    .click{
+        display: none;
+    }
+}
+@media screen and (max-width:425px){
+    .click{
+        display: none;
+    }
+ }
+ @media screen and (max-width:768px){
+    .click{
+        display: none;
+    }
+}
+@media screen and (min-width:1024px){
+    .tap{
+        display: none;
+    }
+}

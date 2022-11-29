@@ -1,12 +1,13 @@
-import React from 'react';
-import Results from './components/Results';
+import './components/style/index.css'
+import Router from './router/Router';
+import React from "react";
 
 
 function App() {
-  return ( 
-     <div>
-       <Results/>
-     </div>
+  return (
+    <div>
+      <Router></Router>
+    </div>
   );
 }
 

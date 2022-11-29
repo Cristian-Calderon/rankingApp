@@ -6,6 +6,13 @@
 }
 .h-1-top-apps{
     margin-top: 10px;
+    text-align: center;
+}
+.tap{
+    text-align: center;
+}
+.click{
+    text-align: center;
 }
 .best-apps{
     height: 120px;
@@ -20,6 +27,9 @@
     margin: 10px;
     height: 30px;
     width: 80px;
+}
+.btn-next-back{
+    text-align: center;
 }
 .next-top-apps:hover {
     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),

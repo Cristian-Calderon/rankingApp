@@ -27,7 +27,7 @@ export const Worst = () => {
            <div className='best-apps'></div>
            <div className='best-apps'></div>
      </div>
-     <div>
+     <div className='btn-next-back'>
      <Link to="/Worst2" className="now-join"><button className='next-top-apps'>Next</button></Link>
      </div>
     </div>

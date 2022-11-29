@@ -22,8 +22,9 @@ export const Top2 = () => {
            <div className='best-apps'></div>
            <div className='best-apps'></div>
            <div className='best-apps'></div>
+           
      </div>
-     <div>
+     <div className='btn-next-back'>
      <Link to="/Top"><button className='next-top-apps'>Back</button></Link>
      </div>
     </div>

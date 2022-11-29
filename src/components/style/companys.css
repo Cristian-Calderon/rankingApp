@@ -17,6 +17,8 @@ p{
 
 .container{
     width: 92%;
+    display: flex;
+    flex-direction: column;
 }
 
 .description-companys{

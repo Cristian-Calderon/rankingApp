@@ -11,6 +11,7 @@ import Medium2 from "../components/vistas/mediumapps/Medium2"
 import Worst from "../components/vistas/worstapps/Worst"
 import Worst2 from "../components/vistas/worstapps/Worst2"
 import About from "../components/vistas/about/About"
+import Ejemplo from "../components/Create/editData"
 import Createapp from "../components/Create/Createapp"
 import { Rank } from "../components/Rank/Rank";
 
@@ -28,6 +29,7 @@ const Router = () =>{
             <Route path="/Worst" element= {<Worst/>}/>
             <Route path="/Worst2" element= {<Worst2/>}/>
             <Route path="/About" element= {<About/>}/>
+            <Route path="/Ejemplo" element= {<Ejemplo/>}/>
             <Route path="/Createapp" element= {<Createapp/>}/>
             
             <Route path="/companys" element= {<Companys/>} />

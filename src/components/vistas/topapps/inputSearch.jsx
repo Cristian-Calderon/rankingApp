@@ -1,43 +1,54 @@
-import React from 'react'
-import empresasJson from '../../../empresas.json'
-import '../../styles/top.css'
+import {React , useEffect , useState} from 'react'
+import axios from "axios";
 
-const SearchBar = () => {
+function InputSearch() {
 
-    const [searchTerm, setSearchTerm] = React.useState("");
-    const handleChange = event => {
-      setSearchTerm(event.target.value);
-    };
-    const results = !searchTerm
-    ? empresasJson
-    : empresasJson.filter(item =>
-        item.Column1.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+    const client = axios.create({
+        baseURL: "http://localhost:3000/posts" 
+    });
+        const [posts, setPosts] = useState([]);
+    
+        useEffect(() => {
+           client.get('?_limit=100').then((response) => {
+              setPosts(response.data);
+           });
+        }, []);
+    
+        const [searchTerm, setSearchTerm] = useState("");
+        const handleChange = event => {
+          setSearchTerm(event.target.value);
+        };
+        const results = !searchTerm
+        ? posts
+        : posts.filter(item  =>
+            item.nombre.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+          );
+    
+    
+        
+    
+      return (
+        <div className="App">
+          <input
+            type="text"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleChange}
+          />
+    
+                        {results.map((data) => (
+                            <div key={data.id} className='best-apps'>
+                                <a>{data.nombre}</a>
+                                <img src={data.logo} alt="" />
+                                <a>{data.ranking}</a>
+                            </div>
+            
+                        ))}
+                   
+    
+        </div>
       );
-
-
-return <div>
-<div className='search'>
-<input 
-        type="text"
-        placeholder="Search"
-        value={searchTerm}
-        onChange={handleChange}
-      />
-</div>
-  <div className='top-container'>
-            {results.map((item, index) => (
-                <div key={item.id} className='best-apps'>
-                    <img src={item.Column3} className="foto"/>
-                    {item.Column1}<br/>
-                    <span>{item.Column2}</span>
-                    </div>
-            ))}
-  </div>
-
-
-</div>
-
-
-};
-
-export default SearchBar;
+}
+    
+    export default InputSearch;
+    

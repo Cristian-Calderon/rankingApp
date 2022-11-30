@@ -17,7 +17,7 @@ export const Top = () => {
        <p className='click'>Click each one for more details</p>
        <InputSearch/>
       
-     <div>
+     <div className='btn-next-back'>
      <Link to="/Top2" className="now-join"><button className='next-top-apps'>Next</button></Link>
      </div>
     </div>

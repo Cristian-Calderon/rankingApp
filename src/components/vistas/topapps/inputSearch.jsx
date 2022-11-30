@@ -1,5 +1,6 @@
 import React from 'react'
 import empresasJson from '../../../empresas.json'
+import '../../styles/top.css'
 
 const SearchBar = () => {
 
@@ -15,23 +16,23 @@ const SearchBar = () => {
 
 
 return <div>
-
-<input
+<div className='search'>
+<input 
         type="text"
         placeholder="Search"
         value={searchTerm}
         onChange={handleChange}
       />
-
-  <ul>
+</div>
+  <div className='top-container'>
             {results.map((item, index) => (
-                <li key={item.id} className='best-apps'>
-                    {item.Column1}
-                    <img src={item.Column3} alt="2"/>
+                <div key={item.id} className='best-apps'>
+                    <img src={item.Column3} className="foto"/>
+                    {item.Column1}<br/>
                     <span>{item.Column2}</span>
-                    </li>
+                    </div>
             ))}
-  </ul>
+  </div>
 
 
 </div>

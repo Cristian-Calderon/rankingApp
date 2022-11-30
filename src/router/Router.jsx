@@ -14,6 +14,7 @@ import About from "../components/vistas/about/About"
 import Createapp from "../components/Create/Createapp"
 import { Rank } from "../components/Rank/Rank";
 
+
 const Router = () =>{
     return(
         <BrowserRouter>
@@ -31,8 +32,9 @@ const Router = () =>{
             <Route path="/Createapp" element= {<Createapp/>}/>
             
             <Route path="/companys" element= {<Companys/>} />
-            <Route path="/rank" element= {<Rank/>} />
+            <Route path="/Rank" element= {<Rank/>} />
             
+           
         </Routes>
         
         </BrowserRouter>

@@ -1,24 +1,26 @@
 import {React , useEffect , useState} from 'react'
 import axios from "axios";
+import '../../styles/top.css'
 
 function InputSearch() {
 
     const client = axios.create({
         baseURL: "http://localhost:3000/posts" 
     });
-        const [posts, setPosts] = useState([]);
+
+    const [posts, setPosts] = useState([]);
     
-        useEffect(() => {
+      useEffect(() => {
            client.get('?_limit=100').then((response) => {
               setPosts(response.data);
            });
         }, []);
     
-        const [searchTerm, setSearchTerm] = useState("");
-        const handleChange = event => {
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleChange = event => {
           setSearchTerm(event.target.value);
         };
-        const results = !searchTerm
+    const results = !searchTerm
         ? posts
         : posts.filter(item  =>
             item.nombre.toLowerCase().includes(searchTerm.toLocaleLowerCase())
@@ -29,22 +31,25 @@ function InputSearch() {
     
       return (
         <div className="App">
-          <input
+          <div className='search'>
+            <input
             type="text"
             placeholder="Search"
             value={searchTerm}
             onChange={handleChange}
-          />
-    
+            />
+         </div>
+
+         <div className='top-container'>
                         {results.map((data) => (
                             <div key={data.id} className='best-apps'>
-                                <a>{data.nombre}</a>
-                                <img src={data.logo} alt="" />
+                                <img src={data.logo} className="foto" />
+                                <a>{data.nombre}</a><br />
                                 <a>{data.ranking}</a>
                             </div>
             
                         ))}
-                   
+         </div>          
     
         </div>
       );

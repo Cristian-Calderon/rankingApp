@@ -11,7 +11,7 @@ const NavBar = () => {
       <div className="menuDesktop">
         <div className="linkDesktop">
       <NavLink className='linTres' to="/"><div class="linTres">Home</div></NavLink> 
-      <NavLink className='linTres' to="/Rank"><div class="linTres"> Top 10 </div></NavLink>
+      <NavLink className='linTres' to="/rank"><div class="linTres"> Top 10 </div></NavLink>
       <NavLink className='linTres'to="/createapp"><div class="linTres">Create new </div></NavLink>
       <NavLink className='linTres' to="/About"><p class="linTres">About us</p></NavLink>
       </div>
@@ -36,7 +36,7 @@ const NavBar = () => {
             <NavLink to="/"><button class="link">Home</button></NavLink> 
           </li>
           <li class="item">
-            <NavLink to="/Rank"><button class="link"> Top 10 </button></NavLink>
+            <NavLink to="/rank"><button class="link"> Top 10 </button></NavLink>
             
           </li>
           <li class="item">

@@ -4,14 +4,38 @@
     flex-wrap: wrap;
     align-items: center;
 }
+.foto{
+    width: 90%;
+    height: 65%;
+    margin-top: 5px;
+    border: 1px solid #2B6C7E;
+}
+.search{
+    text-align: center;
+}
+::placeholder{
+    color: #2B6C7E;
+}
+
 .h-1-top-apps{
     margin-top: 10px;
+    text-align: center;
+}
+.tap{
+    text-align: center;
+}
+.click{
+    text-align: center;
 }
 .best-apps{
     height: 120px;
     width: 140px;
-    background-color: orange;
     margin: 5px;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 8px 2px #2B6C7E;
+-moz-box-shadow: 1px 1px 8px 2px #2B6C7E;
+box-shadow: 1px 1px 8px 2px #2B6C7E;
+    
 }
 .next-top-apps{
     background-color: #2B6C7E;
@@ -20,6 +44,9 @@
     margin: 10px;
     height: 30px;
     width: 80px;
+}
+.btn-next-back{
+    text-align: center;
 }
 .next-top-apps:hover {
     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),

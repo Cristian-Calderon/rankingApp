@@ -18,7 +18,8 @@ export const Home = () => {
           <div className='btns-apps'>
           <Link to="/Top"><button className="btn-apps">Top Apps</button></Link><br />
           <Link to="/Medium"><button className="btn-apps">Medium Apps</button></Link><br />
-          <Link to="/Worst"><button className="btn-apps">Worst Apps</button></Link>
+          <Link to="/Worst"><button className="btn-apps">Worst Apps</button></Link><br />
+          <Link to="/Stars"><button className="btn-apps">Rating Stars</button></Link>
           </div>
           <div className='circle-1'></div>
           <div className='circle-2'></div>

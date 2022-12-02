@@ -43,7 +43,7 @@ const NavBar = () => {
             <NavLink to="/createapp"><button class="link">Create new </button></NavLink>
           </li>
           <li class="item">
-            <NavLink to="/About"><p class="linkDos">About us</p></NavLink>
+            <NavLink to="/About"><button className="link" class="link">About us</button></NavLink>
           </li>
         </ul>
       </nav>

@@ -18,6 +18,7 @@ export const Companys = () => {
             <p></p>
             <p>Description:</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi excepturi necessitatibus omnis quibusdam earum tempore maxime quaerat temporibus illo. Voluptatum tempore temporibus ut quisquam repudiandae, doloribus ullam voluptas provident architecto.</p>
+
           </div>
         </div>
         <div className='star-cont'>

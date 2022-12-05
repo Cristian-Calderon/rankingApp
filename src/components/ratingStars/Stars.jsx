@@ -30,7 +30,6 @@ const handleMouseLeave = () =>{
 
   return (
     <div style={styles.container}>
-     <h2>Rating Stars</h2>
      <div className='print-stars'>
         {Rstars.map((_, index)=>{
             return (
@@ -43,18 +42,13 @@ const handleMouseLeave = () =>{
                 color={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
                 style={{
                     marginRight: 10,
-                    marginTop: 20,
+                    marginTop: 0,
                     cursor: "pointer"
                 }}
                 />
             )
         })}
      </div>
-    
-     <div id="comment-box"></div>
-     
-
-
     </div>
   )
 }
@@ -64,35 +58,11 @@ const styles= {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop:10,
     },
     stars: {
         display: "flex",
         flexDirection: "row",
     },
-    textarea:{
-        border: "1px solid #a9a9a9",
-        borderRdius: 5,
-        padding: 10,
-        margin: "20px 0",
-        minHeight: 100,
-        width: 300
-    },
-    textarea2:{
-        border: "1px solid #a9a9a9",
-        borderRdius: 5,
-        padding: 10,
-        margin: "10px 0",
-        minHeight: 50,
-        width: 300
-    },
-    button:{
-        border: "1px solid a9a9a9",
-        borderRadius: 5,
-        width: 100,
-        padding: 10,
-    }
-   
 };
 
 

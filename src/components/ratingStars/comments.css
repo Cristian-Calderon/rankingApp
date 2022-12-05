@@ -25,6 +25,12 @@
     background-color: white;
     padding: 5px;
 }
+.input-name{
+    height: 35px;
+    width: 300px;
+    background-color: white;
+    padding: 5px;
+}
 .comment-btn{
     height: 40px;
     width: 80px;
@@ -46,4 +52,29 @@
     border: 1px solid black;
     padding: 5px;
     color: #2B6C7E;
+}
+
+@media screen and (max-width: 320px){
+    .input-box{
+        width: 300px;
+    }
+    .comment-container{
+        width: 300px;
+    }
+}
+@media screen and (min-width: 375px){
+    .input-box{
+        width: 350px;
+    }
+    .comment-container{
+        width: 350px;
+    }
+}
+@media screen and (min-width: 425px){
+    .input-box{
+        width: 380px;
+    }
+    .comment-container{
+        width: 380px;
+    }
 }

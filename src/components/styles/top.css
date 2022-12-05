@@ -9,6 +9,7 @@
     height: 65%;
     margin-top: 5px;
     border: 1px solid #2B6C7E;
+    border-radius: 10%;
 }
 .search{
     text-align: center;

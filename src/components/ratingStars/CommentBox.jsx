@@ -13,7 +13,7 @@ export const CommentBox = () => {
     const onChangeHandler = (e) => {
      setComment(e.target.value);
     };
-
+   
   return (
     <div className='main-container'>
         {comments.map((text)=>(
@@ -27,6 +27,7 @@ export const CommentBox = () => {
         className='input-box'
         placeholder='Leave a comment'/>
         <button onClick={onClickHandler} className='comment-btn'>Submit</button>
+        
         </div>
     
     </div>

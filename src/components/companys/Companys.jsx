@@ -2,6 +2,8 @@ import React from 'react'
 import '../style/companys.css'
 import imgexample from '../../assets/img/imgexample.png'
 import { StarPuntation } from '../startpuntation/StarPuntation'
+import Stars from "../ratingStars/Stars"; 
+import CommentBox from "../ratingStars/CommentBox"; 
 
 export const Companys = () => {
   return (
@@ -19,14 +21,10 @@ export const Companys = () => {
           </div>
         </div>
         <div className='star-cont'>
-        <StarPuntation></StarPuntation>
+        <Stars/> 
         </div>
         <div className='parragraph-comment'>
-          <p>Comments</p>
-          <p className='pding'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut, dolore aperiam accusamus vitae beatae odit officiis accusantium iure quas minus, nesciunt repellat quos a exercitationem illum ipsa nobis consectetur!</p>
-        </div>
-        <div className='container-comment'>
-          <input className='comment-text' type="text" placeholder='Leave a comment ...'/>
+        <CommentBox/>
         </div>
       </div>
     </div>

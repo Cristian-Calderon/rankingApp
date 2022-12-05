@@ -2,6 +2,7 @@ import {React , useEffect , useState} from 'react'
 import axios from "axios";
 import '../../styles/top.css'
 
+
 function InputSearch() {
 
     const client = axios.create({
@@ -43,13 +44,13 @@ function InputSearch() {
          <div className='top-container'>
                         {results.map((data) => (
                             <div key={data.id} className='best-apps'>
-                                <img src={data.logo} className="foto" />
+                                 <img src={data.logo} className="foto" />
                                 <a>{data.nombre}</a><br />
                                 <a>{data.ranking}</a>
                             </div>
             
                         ))}
-         </div>          
+         </div>       
     
         </div>
       );

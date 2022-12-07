@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/companys.css";
-import imgexample from "../../assets/img/imgexample.png";
+
 
 import Stars from "../ratingStars/Stars";
 import CommentBox from "../ratingStars/CommentBox";

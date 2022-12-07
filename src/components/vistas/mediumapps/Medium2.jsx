@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import '../../styles/top.css'
 import {Link} from "react-router-dom"
 
@@ -31,4 +31,4 @@ export const Medium2 = () => {
   )
 }
 
-export default Medium2
+export default Medium2*/

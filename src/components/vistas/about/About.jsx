@@ -15,7 +15,7 @@ export const About = () => {
        <a href="https://github.com/Cristian-Calderon" target="_blank"><button className='btn-dev-cont'>Cristian Calderón</button></a><br />
        <a href="https://github.com/Francisco-Aguirr" target="_blank"><button className='btn-dev-cont'>Francisco Aguirre</button></a><br />
        <a href="https://github.com/IngridB-afk" target="_blank"><button className='btn-dev-cont'>Ingrid Barrachina</button></a><br />
-       <a href="https://github.com/Cristian-Calderon" target="_blank"><button className='btn-dev-cont'>Alejandro Buritíca</button></a><br />
+       <a href="https://github.com/AlejoR27" target="_blank"><button className='btn-dev-cont'>Alejandro Buritíca</button></a><br />
        <a href="https://github.com/ecp12" target="_blank"><button className='btn-dev-cont'>Erick Crespin</button></a>
        <hr/>
        <p class="copyright-text">Copyright &copy; Barcelona 2022.

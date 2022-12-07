@@ -1,32 +1,55 @@
-import React from 'react'
-import '../style/companys.css'
-import imgexample from '../../assets/img/imgexample.png'
-import { StarPuntation } from '../startpuntation/StarPuntation'
-import Stars from "../ratingStars/Stars"; 
-import CommentBox from "../ratingStars/CommentBox"; 
+import React from "react";
+import "../style/companys.css";
+import imgexample from "../../assets/img/imgexample.png";
+
+import Stars from "../ratingStars/Stars";
+import CommentBox from "../ratingStars/CommentBox";
+
+import { useParams } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Companys = () => {
+  const OneCompany = async (id, state) => {
+    const petition = await axios.get(`http://localhost:3000/posts/${id}`);
+    state(petition.data);
+  };
+  const [detail, setDetail] = useState(null);
+
+  const params = useParams()
+  useEffect(() => {
+    OneCompany(params.id, setDetail)
+  }, []);
+
   return (
-    <div className='companys'>
-      <div className='container'>
-        <div className='description-companys'>
-          <img src={imgexample} alt="pag" />
-          <div className='pding'>
-            <p>Name:</p>
-            <p></p>
-            <p>Type:</p>
-            <p></p>
-            <p>Description:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi excepturi necessitatibus omnis quibusdam earum tempore maxime quaerat temporibus illo. Voluptatum tempore temporibus ut quisquam repudiandae, doloribus ullam voluptas provident architecto.</p>
+    <>
+      {detail !== null ? (
+        <div className="companys">
+          <div className="container">
+            <div className="description-companys">
+             
+              <img src={detail.logo} alt="pag" />
+              <div className="pding">
+                <p>Name: {detail.nombre}</p>
+                <p></p>
+                <p>Type: </p>
+                <p></p>
+                <p>Description: {detail.comentario}</p>
+               
+              </div>
+            </div>
+            <div className="star-cont">
+              <Stars />
+            </div>
+            <div className="parragraph-comment">
+              <CommentBox />
+            </div>
           </div>
         </div>
-        <div className='star-cont'>
-        <Stars/> 
-        </div>
-        <div className='parragraph-comment'>
-        <CommentBox/>
-        </div>
-      </div>
-    </div>
-  )
-}
+      ) : (
+        "There is not Data"
+      )}
+    </>
+  );
+};

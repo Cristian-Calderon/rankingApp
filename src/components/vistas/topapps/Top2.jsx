@@ -26,10 +26,8 @@ function FilterTop() {
         : posts.filter(item  =>
             item.nombre.toLowerCase().includes(searchTerm.toLocaleLowerCase())
           );
-    
-    
-        
-    
+
+
       return (
         <div className="App">
           <div className='search'>
@@ -47,7 +45,7 @@ function FilterTop() {
                                return(
                                 <div key={data.id} className='best-apps'>
                                 <img src={data.logo} className="foto" />
-                                <a>{data.nombre}</a><br />
+                                <a href={`/companys/${data.id}`}>{data.nombre}</a><br />
                                 <a>{data.ranking}</a>
                                </div>
                                )
@@ -58,6 +56,9 @@ function FilterTop() {
         </div>
       );
 }
+
+
+
     
     export default FilterTop;
     

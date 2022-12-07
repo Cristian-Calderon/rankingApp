@@ -47,7 +47,6 @@ function InputSearch() {
                                 <a>{data.nombre}</a><br />
                                 <a>{data.ranking}</a>
                             </div>
-            
                         ))}
          </div>          
     

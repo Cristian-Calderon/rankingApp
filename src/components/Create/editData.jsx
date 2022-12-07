@@ -4,14 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
-<<<<<<< HEAD
 import '../styles/top.css'
-=======
 
-import '../../index.css';
-import './createapp.css';
-
->>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
 const url="http://localhost:3000/posts/";
 
 class crudEmpresas extends Component {
@@ -96,7 +90,6 @@ console.log(this.state.form);
     const {form}=this.state;
   return (
     <div className="App">
-<<<<<<< HEAD
   <button className="btn btn-success" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
     <table className="table table-2">
       <thead>
@@ -106,37 +99,17 @@ console.log(this.state.form);
           <th className='logo-empresa'>Logo</th>
           <th className='estrellas-empresa'>ranking</th>
           <th className='comentario-empresa'>Comment</th>
-=======
-  <button className="btn btn-success" id="btncreat" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
-    <table className="table">
-      <thead>
-        <tr className="Apps">
-          <th>ID</th>
-          <th>Name</th>
-          <th>Logo</th>
-          <th>Ranking</th>
-          <th className='comment'>Comment</th>
->>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
         </tr>
       </thead>
       <tbody className='tabla-crear-nueva-app'>
         {this.state.data.map(empresa=>{
           return(
-<<<<<<< HEAD
             <tr className='tr-contenido'>
           <td className='id-empresa'>{empresa.id}</td>
           <td className='nombre-empresa'>{empresa.nombre}</td>
           <td className='logo-empresa'><img className='img-create' src={empresa.logo}  /></td>
           <td className='estrellas-empresa'>{empresa.ranking}</td>
           <td className='comentario-empresa'>{empresa.comentario}</td>
-=======
-            <tr>
-          <td>{empresa.id}</td>
-          <td>{empresa.nombre}</td>
-          <td><img className='logo' src={empresa.logo} alt="" /></td>
-          <td>{empresa.ranking}</td>
-          <td className='comment'>{empresa.comentario}</td>
->>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
           <td>
                 <button className="btn btn-primary" id="btnedit" onClick={()=>{this.seleccionarEmpresa(empresa); this.Insertar()}}><FontAwesomeIcon icon={faEdit}/></button>
                 {"   "}

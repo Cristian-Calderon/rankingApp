@@ -33,7 +33,7 @@ export const Companys = () => {
               <div className="pding">
                 <p>Name: {detail.nombre}</p>
                 <p></p>
-                <p>Type: </p>
+                <p>Type: </p>git
                 <p></p>
                 <p>Description: {detail.comentario}</p>
                

@@ -1,12 +1,9 @@
 import React, { useState }  from 'react';
-import '../style/index.css'
+import axios from 'axios';
+import '../../index.css';
 import './createapp.css';
 
-import Titleapp from './Titleapp';
-
-//npm install styled-components
-
-
+// creamos una variable const para llamar los atributos al form
 const Createapp = () => {
   const [state, setState] = useState({
     name: '',
@@ -15,24 +12,28 @@ const Createapp = () => {
     upload: '',
   });
   
-
-  const handleChange = (event) => {
-    setState((prevProps) => ({
-      ...prevProps,
-      [event.target.name]: event.target.value,
-    }));
+// esta función es para establecer un nuevo estado para el input
+  const handleChange = ({target}) => {
+    setState({
+      ...state,
+      [target.name]: target.value,
+    });
   };
 
-  const handleSubmit = (event) => {
-    // Send State
-    event.preventDefault();
-    alert(state);
-  };
+// llamamos a la API
+  const url = 'https://retoolapi.dev/7GkXxc/data'
+
+// para recibir los datos del form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await axios.post(url,state);
+    console.log(response);
+  }
 
   return (
     <>
       <div>
-        <Titleapp />
+      <h3>Create your app</h3>
       </div>
         <div className='app'>
           <form onSubmit={handleSubmit}>

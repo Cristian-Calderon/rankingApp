@@ -13,6 +13,7 @@ import Worst2 from "../components/vistas/worstapps/Worst2"
 import About from "../components/vistas/about/About"
 import Ejemplo from "../components/Create/editData"
 import Createapp from "../components/Create/Createapp"
+import Carousel from "../components/vistas/home/Carousel";
 import { Rank } from "../components/Rank/Rank";
 
 const Router = () =>{
@@ -35,6 +36,7 @@ const Router = () =>{
             <Route path="/companys" element= {<Companys/>} />
             <Route path="/rank" element= {<Rank/>} />
             
+            <Route path="/carousel" element= {<Carousel/>} />
         </Routes>
         
         </BrowserRouter>

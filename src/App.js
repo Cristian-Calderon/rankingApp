@@ -1,4 +1,4 @@
-import './components/style/index.css'
+import './index.css'
 import Router from './router/Router';
 import React from "react";
 

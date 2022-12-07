@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/home.css'
 import {Link} from "react-router-dom"
 
-
+import Carousel from './Carousel';
 
 
 export const Home = () => {
@@ -15,6 +15,7 @@ export const Home = () => {
           <div className='decorative-divi-2'></div>
           </div>
           <p className='where'>Where do you want to go first?</p>
+<Carousel/>
           <div className='btns-apps'>
           <Link to="/Top"><button className="btn-apps">Top Apps</button></Link><br />
           <Link to="/Medium"><button className="btn-apps">Medium Apps</button></Link><br />

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/companys.css'
+import '../../index.css'
 import imgexample from '../../assets/img/imgexample.png'
 import { StarPuntation } from '../startpuntation/StarPuntation'
 

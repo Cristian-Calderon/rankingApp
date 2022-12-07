@@ -3,9 +3,6 @@ import Empresas from "../../empresas.json";
 import '../styles/rank.css'
 
 export const Rank = () => {
-
-
-
   return (
     <div className="container">
       <div className="rank">
@@ -34,6 +31,7 @@ export const Rank = () => {
       })}
     </div>
   </div>
-    
   );
 };
+
+export default Rank;

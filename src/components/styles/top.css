@@ -214,3 +214,7 @@ box-shadow: 1px 1px 8px 2px #2B6C7E;
         display: none;
     }
 }
+.img-carousel{
+    height: 200px;
+    width: 200px;
+}

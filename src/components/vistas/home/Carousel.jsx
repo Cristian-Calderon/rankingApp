@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import axios from "axios";
+import '../../styles/top.css'
 
 function ControlledCarousel() {
   // const url = axios.create({
@@ -29,7 +30,7 @@ function ControlledCarousel() {
           return(
       <Carousel.Item>
           <img src={post.logo} 
-            className="d-block w-100"
+            className="d-block w-100 img-carousel"
             alt="Second slide"
           />
         <Carousel.Caption>

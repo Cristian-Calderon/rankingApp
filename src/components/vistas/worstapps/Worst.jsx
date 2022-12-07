@@ -50,7 +50,7 @@ function FilterWorse() {
                                return  ( 
                                 <div key={data.id} className='best-apps'>
                                 <img src={data.logo} className="foto" />
-                                <a href={`/companys/${data.id}`}>{data.nombre}</a><br />
+                                <a className='nameApp' href={`/companys/${data.id}`}>{data.nombre}</a><br />
                                 <a>{data.ranking}</a>
                                </div>
                                )

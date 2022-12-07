@@ -13,6 +13,12 @@
     border: 1px solid #2B6C7E;
     border-radius: 10%;
 }
+.nameApp{
+    text-decoration: none;
+    color:#2B6C7E;
+    font-weight: bolder;
+}
+
 .search{
     text-align: center;
 }

@@ -25,6 +25,7 @@ const NavBar = () => {
       <nav class="nav">
         <ul class="list">
             <div className="search">
+             
               <TextField
                 id="outlined-basic"
                 variant="outlined"

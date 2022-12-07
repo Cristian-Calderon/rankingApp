@@ -25,22 +25,24 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} variant='dark'>
               {posts.map((post) => {
+                if(post.ranking.length > 6){                
           return(
       <Carousel.Item>
           <img src={post.logo} 
-            className="d-block w-100 img-carousel"
+            className="d-block img-carousel"
             alt="Second slide"
           />
         <Carousel.Caption>
-          <div key={post.id} className='best-apps'>
+          <div key={post.id} className=''>
             <a href={`/companys/${post.id}`}>{post.nombre}</a><br />
             <span>{post.ranking}</span>
           </div>
         </Carousel.Caption> 
       </Carousel.Item>
                 )
+              }
               })}
               
       {/* <Carousel.Item>

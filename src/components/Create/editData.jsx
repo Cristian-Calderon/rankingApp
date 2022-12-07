@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
-
+import '../styles/top.css'
 const url="http://localhost:3000/posts/";
 
 class crudEmpresas extends Component {
@@ -90,25 +90,25 @@ console.log(this.state.form);
   return (
     <div className="App">
   <button className="btn btn-success" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
-    <table className="table">
+    <table className="table table-2">
       <thead>
-        <tr lassName="Apps">
-          <th>ID</th>
-          <th>Name</th>
-          <th>Logo</th>
-          <th>ranking</th>
-          <th>Comment</th>
+        <tr className="Apps">
+          <th className='id-empresa'>ID</th>
+          <th className='nombre-empresa'>Name</th>
+          <th className='logo-empresa'>Logo</th>
+          <th className='estrellas-empresa'>ranking</th>
+          <th className='comentario-empresa'>Comment</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='tabla-crear-nueva-app'>
         {this.state.data.map(empresa=>{
           return(
-            <tr>
-          <td>{empresa.id}</td>
-          <td>{empresa.nombre}</td>
-          <td><img className='img' src={empresa.logo} alt="" /></td>
-          <td>{empresa.ranking}</td>
-          <td>{empresa.comentario}</td>
+            <tr className='tr-contenido'>
+          <td className='id-empresa'>{empresa.id}</td>
+          <td className='nombre-empresa'>{empresa.nombre}</td>
+          <td className='logo-empresa'><img className='img-create' src={empresa.logo}  /></td>
+          <td className='estrellas-empresa'>{empresa.ranking}</td>
+          <td className='comentario-empresa'>{empresa.comentario}</td>
           <td>
                 <button className="btn btn-primary" onClick={()=>{this.seleccionarEmpresa(empresa); this.Insertar()}}><FontAwesomeIcon icon={faEdit}/></button>
                 {"   "}

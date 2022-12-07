@@ -13,6 +13,7 @@ export const CommentBox = () => {
     const onChangeHandler = (e) => {
      setComment(e.target.value);
     };
+  
    
   return (
     <div className='main-container'>
@@ -22,11 +23,11 @@ export const CommentBox = () => {
         
         <div className='comment-flexBox'>
         <h3 className="comment-text">Comments:</h3>
-        <textarea value={comment} 
+        <textarea id='comment-clear' value={comment} 
         onChange={onChangeHandler} 
         className='input-box'
         placeholder='Leave a comment'/>
-        <button onClick={onClickHandler} className='comment-btn'>Submit</button>
+        <button value="Clear" onClick={onClickHandler} className='comment-btn'>Submit</button>
         
         </div>
     

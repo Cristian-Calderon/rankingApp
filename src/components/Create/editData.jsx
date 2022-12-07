@@ -4,9 +4,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import '../styles/top.css'
 
 import '../../index.css';
-import './createapp.css';
+
 
 const url="http://localhost:3000/posts/";
 
@@ -92,26 +93,26 @@ console.log(this.state.form);
     const {form}=this.state;
   return (
     <div className="App">
-  <button className="btn btn-success" id="btncreat" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
-    <table className="table">
+  <button className="btn btn-success" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
+    <table className="table table-2">
       <thead>
         <tr className="Apps">
-          <th>ID</th>
-          <th>Name</th>
-          <th>Logo</th>
-          <th>Ranking</th>
-          <th className='comment'>Comment</th>
+          <th className='id-empresa'>ID</th>
+          <th className='nombre-empresa'>Name</th>
+          <th className='logo-empresa'>Logo</th>
+          <th className='estrellas-empresa'>ranking</th>
+          <th className='comentario-empresa'>Comment</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='tabla-crear-nueva-app'>
         {this.state.data.map(empresa=>{
           return(
-            <tr>
-          <td>{empresa.id}</td>
-          <td>{empresa.nombre}</td>
-          <td><img className='logo' src={empresa.logo} alt="" /></td>
-          <td>{empresa.ranking}</td>
-          <td className='comment'>{empresa.comentario}</td>
+            <tr className='tr-contenido'>
+          <td className='id-empresa'>{empresa.id}</td>
+          <td className='nombre-empresa'>{empresa.nombre}</td>
+          <td className='logo-empresa'><img className='img-create' src={empresa.logo}  /></td>
+          <td className='estrellas-empresa'>{empresa.ranking}</td>
+          <td className='comentario-empresa'>{empresa.comentario}</td>
           <td>
                 <button className="btn btn-primary" id="btnedit" onClick={()=>{this.seleccionarEmpresa(empresa); this.Insertar()}}><FontAwesomeIcon icon={faEdit}/></button>
                 {"   "}

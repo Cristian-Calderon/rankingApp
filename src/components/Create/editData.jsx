@@ -4,7 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+<<<<<<< HEAD
 import '../styles/top.css'
+=======
+
+import '../../index.css';
+import './createapp.css';
+
+>>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
 const url="http://localhost:3000/posts/";
 
 class crudEmpresas extends Component {
@@ -31,7 +38,7 @@ axios.get(url).then(response=>{
 
 empresasPost=async()=>{
   delete this.state.form.id;
- await axios.post(url,this.state.form).then(response=>{
+  await axios.post(url,this.state.form).then(response=>{
     this.Insertar();
     this.empresasGet();
   }).catch(error=>{
@@ -84,11 +91,12 @@ console.log(this.state.form);
     this.empresasGet();
   }
   
-
+//<-------------------TABLE----------------->
   render(){
     const {form}=this.state;
   return (
     <div className="App">
+<<<<<<< HEAD
   <button className="btn btn-success" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
     <table className="table table-2">
       <thead>
@@ -98,21 +106,41 @@ console.log(this.state.form);
           <th className='logo-empresa'>Logo</th>
           <th className='estrellas-empresa'>ranking</th>
           <th className='comentario-empresa'>Comment</th>
+=======
+  <button className="btn btn-success" id="btncreat" onClick={()=>{this.setState({form: null, comentario: 'insertar'}); this.Insertar()}}>Create Company</button>
+    <table className="table">
+      <thead>
+        <tr className="Apps">
+          <th>ID</th>
+          <th>Name</th>
+          <th>Logo</th>
+          <th>Ranking</th>
+          <th className='comment'>Comment</th>
+>>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
         </tr>
       </thead>
       <tbody className='tabla-crear-nueva-app'>
         {this.state.data.map(empresa=>{
           return(
+<<<<<<< HEAD
             <tr className='tr-contenido'>
           <td className='id-empresa'>{empresa.id}</td>
           <td className='nombre-empresa'>{empresa.nombre}</td>
           <td className='logo-empresa'><img className='img-create' src={empresa.logo}  /></td>
           <td className='estrellas-empresa'>{empresa.ranking}</td>
           <td className='comentario-empresa'>{empresa.comentario}</td>
+=======
+            <tr>
+          <td>{empresa.id}</td>
+          <td>{empresa.nombre}</td>
+          <td><img className='logo' src={empresa.logo} alt="" /></td>
+          <td>{empresa.ranking}</td>
+          <td className='comment'>{empresa.comentario}</td>
+>>>>>>> ab5e3ed97f86e9df0b3e681b897cb7c5e28a6141
           <td>
-                <button className="btn btn-primary" onClick={()=>{this.seleccionarEmpresa(empresa); this.Insertar()}}><FontAwesomeIcon icon={faEdit}/></button>
+                <button className="btn btn-primary" id="btnedit" onClick={()=>{this.seleccionarEmpresa(empresa); this.Insertar()}}><FontAwesomeIcon icon={faEdit}/></button>
                 {"   "}
-                <button className="btn btn-danger" onClick={()=>{this.seleccionarEmpresa(empresa); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
+                <button className="btn btn-danger" id="btndel" onClick={()=>{this.seleccionarEmpresa(empresa); this.setState({modalEliminar: true})}}><FontAwesomeIcon icon={faTrashAlt}/></button>
                 </td>
           </tr>
           )
@@ -123,10 +151,13 @@ console.log(this.state.form);
 
 
     <Modal isOpen={this.state.Insertar}>
-                <ModalHeader style={{display: 'block'}}>
-                  <span style={{float: 'right'}} onClick={()=>this.Insertar()}>x</span>
+                <ModalHeader className="form" style={{display: 'block'}}>
+                <div className='formhead'>
+                  <h3 className='title'>Create your app</h3>
+                  <button className="btn btn" id="x" onClick={()=>this.Insertar()}>x</button>
+                </div>
                 </ModalHeader>
-                <ModalBody>
+                <ModalBody className="form">
                   <div className="form-group">
                     <label htmlFor="id">ID</label>
                     <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: this.state.data.length+1}/>
@@ -139,20 +170,21 @@ console.log(this.state.form);
                     <br />
                     <label htmlFor="ranking">Ranking</label>
                     <input className="form-control" type="text" name="ranking" id="ranking" onChange={this.handleChange} value={form?form.ranking:''}/>
+                    <br />
                     <label htmlFor="ranking">Comment</label>
                     <input className="form-control" type="text" name="comentario" id="comentario" onChange={this.handleChange} value={form?form.comentario:''}/>
                   </div>
                 </ModalBody>
 
-                <ModalFooter>
+                <ModalFooter className="form">
                   {this.state.comentario =='insertar'?
-                    <button className="btn btn-primary" onClick={()=>this.empresasPost()}>
-                    Insertar
+                    <button className="btn btn" id="btnadd" onClick={()=>this.empresasPost()}>
+                    Add
                   </button>: <button className="btn btn-primary" onClick={()=>this.empresasPut()}>
                     Actualizar
                   </button>
   }
-                    <button className="btn btn-danger" onClick={()=>this.Insertar()}>Cancelar</button>
+                    <button className="btn btn" id="btncan" onClick={()=>this.Insertar()}>Cancel</button>
                 </ModalFooter>
           </Modal>
 

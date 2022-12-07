@@ -26,7 +26,12 @@ p{
 }
 
 .description-companys img{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .description-companys p{
@@ -37,6 +42,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items:flex-start;
+    padding: 50px;
 }
 
 .star-cont{
@@ -70,6 +76,8 @@ p{
     border: none;
     background-color: #F0F5F9;
 }
+
+
 
 /*
 Media:

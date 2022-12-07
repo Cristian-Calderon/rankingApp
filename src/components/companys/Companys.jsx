@@ -29,7 +29,7 @@ export const Companys = () => {
           <div className="container">
             <div className="description-companys">
              
-              <img src={detail.logo} alt="pag" />
+              <img className="imgCompany" src={detail.logo} alt="pag" />
               <div className="pding">
                 <p>Name: {detail.nombre}</p>
                 <p></p>

@@ -3,6 +3,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    margin: 60px;
 }
 .foto{
     width: 90%;

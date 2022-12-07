@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+//import React, {useState} from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom" 
 import NavBar from "../components/nav/Nav"; 
 //import Createapp from '../components/Create/Createapp';
@@ -39,7 +39,7 @@ const Router = () =>{
             <Route path="/CommentBox" element= {<CommentBox/>}/>
             
             <Route path="/Createapp" element= {<Ejemplo/>}/>
-            <Route path="/companys" element= {<Companys/>} />
+            <Route path="/companys/:id" element= {<Companys/>} />
             <Route path="/Rank" element= {<Rank/>} />
             
             

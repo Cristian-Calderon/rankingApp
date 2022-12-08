@@ -28,7 +28,6 @@ const ProductComparison = ({ products }) => {
   return (
    
     <div>
-     <h1>Company Comparator</h1>
       {selectedItems.length > 0 && (
         <Table striped bordered hover >
           <thead >

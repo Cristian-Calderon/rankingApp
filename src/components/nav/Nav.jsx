@@ -13,6 +13,7 @@ const NavBar = () => {
       <NavLink className='linTres' to="/"><div class="linTres">Home</div></NavLink> 
       <NavLink className='linTres' to="/rank"><div class="linTres"> Top 10 </div></NavLink>
       <NavLink className='linTres'to="/createapp"><div class="linTres">Create new </div></NavLink>
+      <NavLink className='linTres'to="/comparation"><div class="linTres">Company Comparator</div></NavLink>
       <NavLink className='linTres' to="/About"><p class="linTres">About us</p></NavLink>
       </div>
       </div>
@@ -24,13 +25,7 @@ const NavBar = () => {
       <div class="background">&nbsp;</div>
       <nav class="nav">
         <ul class="list">
-            <div className="search">
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                fullWidth
-                label="Search"/>
-            </div>
+            
           
           <li class="item">
             <NavLink to="/"><button class="link">Home</button></NavLink> 

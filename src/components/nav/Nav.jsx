@@ -13,6 +13,7 @@ const NavBar = () => {
       <NavLink className='linTres' to="/"><div class="linTres">Home</div></NavLink> 
       <NavLink className='linTres' to="/rank"><div class="linTres"> Top 10 </div></NavLink>
       <NavLink className='linTres'to="/createapp"><div class="linTres">Create new </div></NavLink>
+      <NavLink className='linTres'to="/comparation"><div class="linTres">Company Comparator</div></NavLink>
       <NavLink className='linTres' to="/About"><p class="linTres">About us</p></NavLink>
       </div>
       </div>
@@ -44,6 +45,9 @@ const NavBar = () => {
           </li>
           <li class="item">
             <NavLink to="/About"><button className="link" class="link">About us</button></NavLink>
+          </li>
+          <li class="item">
+            <NavLink to="/comparation"><button className="link" class="link">Company Comparator</button></NavLink>
           </li>
         </ul>
       </nav>

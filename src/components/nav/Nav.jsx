@@ -25,13 +25,7 @@ const NavBar = () => {
       <div class="background">&nbsp;</div>
       <nav class="nav">
         <ul class="list">
-            <div className="search">
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                fullWidth
-                label="Search"/>
-            </div>
+            
           
           <li class="item">
             <NavLink to="/"><button class="link">Home</button></NavLink> 
@@ -45,9 +39,6 @@ const NavBar = () => {
           </li>
           <li class="item">
             <NavLink to="/About"><button className="link" class="link">About us</button></NavLink>
-          </li>
-          <li class="item">
-            <NavLink to="/comparation"><button className="link" class="link">Company Comparator</button></NavLink>
           </li>
         </ul>
       </nav>

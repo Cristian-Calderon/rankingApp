@@ -42,13 +42,7 @@ function InputSearch() {
             onChange={handleChange}
             />
           </div>
-        
-         
-          
-            <ComparationObject products={results}></ComparationObject>
-               
-        
-         
+          <ComparationObject products={results}></ComparationObject>
         </div>
       );
 }

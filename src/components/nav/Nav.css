@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto&display=swap');
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 320px) and (min-width: 320px){
     .nav{
         margin: auto !important;
 
@@ -13,17 +13,50 @@
         display:initial !important;
     }  
     .list{
-        top: 49% !important;
-        left: 10% !important;
+        top: 70% !important;
+        left: -5% !important;
     }
     .background {
-        height: 2rem !important;
-        width: 2rem !important;
         right: 9vw !important;
         
     }
+    .icon {
+      left: 83.5% !important;
+      top: 55px !important;
+    } 
+    .checkbox:checked ~ .background {
+      transform: scale(20) !important;
+    }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 375px) and (min-width: 375px){
+  .nav{
+      margin: auto !important;
+
+  }
+  .linkDesktop{
+      display: none !important;
+   } 
+   
+  .menuBurger{
+      display:initial !important;
+  }  
+  .list{
+      top: 60% !important;
+      left: 5% !important;
+  }
+  .background {
+      right: 9vw !important;
+      
+  }
+  .icon {
+    left: 84.5% !important;
+    top: 55px !important;
+  }
+  .checkbox:checked ~ .background {
+    transform: scale(15) !important;
+  } 
+}
+@media screen and (max-width: 425px) and (min-width: 425px){
     .linkDesktop{
         display: none !important;
       
@@ -33,26 +66,42 @@
         display:initial !important;
     } 
     .list{
-        top: 40% !important;
-        left: -20% !important;
+        top: 60% !important;
+        left: 5% !important;
     }
     .background {
-        height: 2rem !important;
-        width: 2rem !important;
-        right: 8vw !important;
-        
+        right: 6vw !important; 
+        top:25px !important; 
     } 
+    .icon {
+      left: 88.5% !important;
+      top: 50px !important;
+    } 
+    .checkbox:checked ~ .background {
+      transform: scale(15) !important;
+    }
 }
-@media screen and (max-width: 820px){
-    .linkDesktop{
-        display: none !important;
-      
-     } 
-     
-    .menuBurger{
-        display:initial !important;
-    }  
+@media screen and (max-width: 768px) and (min-width: 768px){
+  .linkDesktop{
+      display: none !important;
+    
+   } 
+   
+  .menuBurger{
+      display:initial !important;
+  }
+  .list{
+    top: 60% !important;
+} 
+  .icon {
+    left: 90% !important;
+    
+  } 
+  .checkbox:checked ~ .background {
+    transform: scale(15) !important;
+  }
 }
+
  .navBody{
     margin: auto;
     width: 100%;
@@ -114,8 +163,7 @@
     top: 3.5vh; 
     right: 7vw; 
     background:#F0F5F9;
-    z-index: 1000;
-  
+    z-index: 4;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
   
@@ -124,7 +172,7 @@
     position: fixed;
     top: 0;
     right: -60vw;
-    z-index: 1500;
+    z-index: 4;
     opacity: 0;
     width: 0;
     transition: all 0.8s;
@@ -135,7 +183,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 43%;
+    top: 70%;
     left: 40%;
     transform: translate(-50%, -50%);
     list-style: none;
@@ -195,10 +243,11 @@
   /*  */
   /* styling hamb ICON */
   .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: fixed;
+    top: 6%;
+    left: 90%;
     transform: translate(-50%, -50%);
+    z-index: 7;
   }
   
   .icon,

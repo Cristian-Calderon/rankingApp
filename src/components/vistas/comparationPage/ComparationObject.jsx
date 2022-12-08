@@ -41,6 +41,16 @@ const ProductComparison = ({ products }) => {
           
           </thead>
           <tbody>
+          <tr>
+              <td>
+                <label>
+                 Logo
+                </label>
+              </td>
+              {selectedItems.map((empresas) => (
+                <td key={empresas.id}><img style={{ height: '50px'}} src={empresas.logo} alt="" /></td>
+              ))}
+            </tr>
             <tr>
               <td>
                 <label >

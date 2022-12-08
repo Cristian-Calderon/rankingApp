@@ -130,7 +130,7 @@ console.log(this.state.form);
                 <ModalHeader className="form" style={{display: 'block'}}>
                 <div className='formhead'>
                   <h3 className='title'>Create your app</h3>
-                  <button className="btn btn" id="x" onClick={()=>this.Insertar()}><img  src={X}  /></button>
+                  <button className="btn btn" id="x" onClick={()=>this.Insertar()}><img  src={X}  /></button> 
                 </div>
                 </ModalHeader>
                 <ModalBody className="form">

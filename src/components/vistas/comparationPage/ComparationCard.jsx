@@ -13,7 +13,7 @@ const ProductCard = ({
 
   <Card class="shadow p-3 mb-5 bg-white rounded" style={{ width: '257px',margin: '15px'}}  key={product.nombre}>
     <Card.Body >
-     <Card.Img  variant="top" style={{ height: '120px',borderRadius:'10px'}} src={product.logo} />
+     <Card.Img  variant="top" style={{ height: '150px',borderRadius:'10px'}} src={product.logo} />
      <Card.Body className="bg-dark text-white"  style={{marginTop:'20px',borderRadius:'10px', padding:'10px'}} >
       <Card.Title>{product.nombre}</Card.Title>
       <Card.Text className="text-center">{product.ranking}</Card.Text>

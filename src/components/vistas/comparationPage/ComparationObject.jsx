@@ -28,7 +28,6 @@ const ProductComparison = ({ products }) => {
   return (
    
     <div>
-     <h1>Company Comparator</h1>
       {selectedItems.length > 0 && (
         <Table striped bordered hover >
           <thead >
@@ -42,6 +41,16 @@ const ProductComparison = ({ products }) => {
           
           </thead>
           <tbody>
+          <tr>
+              <td>
+                <label>
+                 Logo
+                </label>
+              </td>
+              {selectedItems.map((empresas) => (
+                <td key={empresas.id}><img style={{ height: '50px'}} src={empresas.logo} alt="" /></td>
+              ))}
+            </tr>
             <tr>
               <td>
                 <label >

@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from 'react-bootstrap/Image'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
@@ -12,12 +11,13 @@ const ProductCard = ({
   selected
 }) => (
 
-  <Card  style={{ width: '12rem' }} key={product.nombre}>
-    <Image style={{height:'150px'}} src={product.logo} />
-    <Card.Body>
+  <Card class="shadow-lg p-3 mb-5 bg-white rounded" style={{ width: '257px',margin: '15px'}}  key={product.nombre}>
+    <Card.Body >
+     <Card.Img variant="top" style={{ height: '120px'}} src={product.logo} />
+     <Card.Body>
       <Card.Title>{product.nombre}</Card.Title>
-      <Card.Text>{product.ranking}</Card.Text>
-      <Card.Text>
+      <Card.Text className="text-center">{product.ranking}</Card.Text>
+      <Card.Body className="text-center">
         {selected && selected.includes(product) ? (
           <Button variant="danger" onClick={() => removeFromCompare(product)}>
             Remove
@@ -27,7 +27,8 @@ const ProductCard = ({
             Compare
           </Button>
         )}
-      </Card.Text>
+        </Card.Body>
+      </Card.Body>
     </Card.Body>
   </Card>
  

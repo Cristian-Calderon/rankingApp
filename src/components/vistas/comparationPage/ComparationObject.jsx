@@ -28,7 +28,7 @@ const ProductComparison = ({ products }) => {
   return (
    
     <div>
-     <h1>Compare Items</h1>
+     <h1>Company Comparator</h1>
       {selectedItems.length > 0 && (
         <Table striped bordered hover >
           <thead >
@@ -66,7 +66,7 @@ const ProductComparison = ({ products }) => {
         </Table>
       )}
       
-      <div className="Cards"  columns={selectedItems.length} stackable padded divided>
+      <div columns={selectedItems.length} stackable padded divided>
        <Stylecards>
           {products.map((product) => (
             <ComparationCard

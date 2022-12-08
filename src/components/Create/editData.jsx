@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import '../styles/top.css'
-
+import X from '../../assets/img/x.svg'
 import '../../index.css';
 
 
@@ -130,7 +130,7 @@ console.log(this.state.form);
                 <ModalHeader className="form" style={{display: 'block'}}>
                 <div className='formhead'>
                   <h3 className='title'>Create your app</h3>
-                  <button className="btn btn" id="x" onClick={()=>this.Insertar()}>x</button>
+                  <button className="btn btn" id="x" onClick={()=>this.Insertar()}><img  src={X}  /></button>
                 </div>
                 </ModalHeader>
                 <ModalBody className="form">

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto&display=swap');
 .App{
     margin: 2%;
 }
@@ -35,10 +36,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    font-family: Poppins;
+    font-family: 'Poppins';
 }
-#x{
+#X{
     background-color: #F0F5F9;
     display: flex;
 }

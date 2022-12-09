@@ -10,12 +10,14 @@ export const Home = () => {
     <div>
           <div className='init-div'>
           <div className='home-div bg-animado-blue'>
-          <h2 className='welcome'>Welcome to RankingApp</h2>
+          <Carousel/>
           <div className='decorative-divi'></div>
           <div className='decorative-divi-2'></div>
+          
           </div>
+          <h2 className='welcome'>Welcome to RankingApp</h2>
           <p className='where'>Where do you want to go first?</p>
-<Carousel/>
+
           <div className='btns-apps'>
           <Link to="/Top"><button className="btn-apps">Top Apps</button></Link><br />
           <Link to="/Medium"><button className="btn-apps">Medium Apps</button></Link><br />

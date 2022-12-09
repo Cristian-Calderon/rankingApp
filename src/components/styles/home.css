@@ -32,7 +32,7 @@
     100%{background-position:0% 50%}
 }
 .welcome{
-    color: white;
+    color: black;
     margin-top: 80px;
 }
 .where{
@@ -47,6 +47,7 @@
     opacity: 0.5;
     border: 1px solid #fbd037;
     margin-left: 10px;
+    margin-top: 20px;
 }
 .decorative-divi-2{
     height: 30px;

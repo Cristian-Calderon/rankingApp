@@ -2,58 +2,56 @@ import {React , useEffect , useState} from 'react'
 import axios from "axios";
 import '../../styles/top.css'
 
-
 function InputSearch() {
 
-    const client = axios.create({
-        baseURL: "http://localhost:3000/posts" 
-    });
+  const client = axios.create({
+    baseURL: "http://localhost:3000/posts" 
+  });
 
-    const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
     
-      useEffect(() => {
-           client.get('?_limit=100').then((response) => {
-              setPosts(response.data);
-           });
-        }, []);
+  useEffect(() => {
+    client.get('?_limit=100').then((response) => {
+      setPosts(response.data);
+    });
+  }, []);
     
-    const [searchTerm, setSearchTerm] = useState("");
-    const handleChange = event => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleChange = event => {
           setSearchTerm(event.target.value);
         };
-    const results = !searchTerm
-        ? posts
-        : posts.filter(item  =>
-            item.nombre.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-          );
+  
+  const results = !searchTerm
+      ? posts
+      : posts.filter(item  =>
+        item.nombre.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+        );        
     
-    
-        
-    
-      return (
-        <div className="App">
-          <div className='search'>
-            <input
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={handleChange}
-            />
-         </div>
+  return (
+    <div className="App">
+      <div className='search'>
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={handleChange}
+        />
+      </div>
 
-         <div className='top-container'>
-                        {results.map((data) => (
-                            <div key={data.id} className='best-apps'>
-                                 <img src={data.logo} className="foto" />
-                                <a>{data.nombre}</a><br />
-                                <a>{data.ranking}</a>
-                            </div>
-                        ))}
-         </div>       
-    
-        </div>
-      );
+      <div className='top-container'>
+        {results.map((data) => (
+          <div key={data.id} className='best-apps'>
+            <img src={data.logo} className="foto" />
+            <a>{data.nombre}</a><br />
+            <a>{data.ranking}</a>
+          </div>
+          ))
+        }
+      </div>       
+    </div>
+  );
 }
     
-    export default InputSearch;
+export default InputSearch;
     

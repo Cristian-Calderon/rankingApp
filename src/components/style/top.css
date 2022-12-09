@@ -39,14 +39,7 @@
 box-shadow: 1px 1px 8px 2px #2B6C7E;
     
 }
-.next-top-apps{
-    background-color: #2B6C7E;
-    color: white;
-    border: none;
-    margin: 10px;
-    height: 30px;
-    width: 80px;
-}
+
 .btn-next-back{
     text-align: center;
 }
@@ -85,7 +78,6 @@ box-shadow: 1px 1px 8px 2px #2B6C7E;
 }
 @media screen and (min-width:425px){
     .App{
-        background-color: aliceblue;
         width: 100%;   
         display: flex;
         justify-content: center;
@@ -110,7 +102,6 @@ box-shadow: 1px 1px 8px 2px #2B6C7E;
 }
 @media screen and (min-width:768px){
     .App{
-        background-color: aliceblue;
         width: 100%;   
         display: flex;
         justify-content: center;
@@ -132,9 +123,6 @@ box-shadow: 1px 1px 8px 2px #2B6C7E;
     }
 }
 @media screen and (min-width:1024px){
-    .App{
-        background-color: aliceblue;
-    }
     .btn-success{
         width: 250px;
     }

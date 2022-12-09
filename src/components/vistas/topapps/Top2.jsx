@@ -1,7 +1,7 @@
 
 import {React , useEffect , useState} from 'react'
 import axios from "axios";
-import '../../styles/top.css'
+import '../../style/top.css'
 
 function FilterTop() {
 
@@ -62,24 +62,3 @@ function FilterTop() {
     
     export default FilterTop;
     
-
-
-
-
-// export const Top2 = () => {
-//   return (
-//     <div>
-
-//       <div><h2 className='h-1-top-apps'>Top apps</h2></div>
-//        <p className='tap'>Tap each one for more details</p>
-//        <p className='click'>Click each one for more details</p>
-//        <InputSearch/>
-      
-//      <div className='btn-next-back'>
-//      <Link to="/Top"><button className='next-top-apps'>Back</button></Link>
-//      </div>
-//     </div>
-//   )
-// }
-
-// export default Top2

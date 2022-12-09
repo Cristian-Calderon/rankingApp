@@ -25,52 +25,34 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    
+    <Carousel className="carousel-main"  activeIndex={index} onSelect={handleSelect} variant='dark'>
               {posts.map((post) => {
+                if(post.ranking.length > 6){                
           return(
       <Carousel.Item>
           <img src={post.logo} 
-            className="d-block w-100 img-carousel"
+            className="d-block img-carousel w-100"
             alt="Second slide"
           />
-        <Carousel.Caption>
-          <div key={post.id} className='best-apps'>
-            <a href={`/companys/${post.id}`}>{post.nombre}</a><br />
+
+          <br/>
+        <Carousel.Caption className="best-apps-2">
+          <div key={post.id} className='best-apps-2'>
+            <a className="link-carousel" href={`/companys/${post.id}`}>{post.nombre}</a><br />
+
+
             <span>{post.ranking}</span>
           </div>
         </Carousel.Caption> 
       </Carousel.Item>
                 )
+              }
               })}
               
-      {/* <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
     </Carousel>
   );
+ 
 }
 
 export default ControlledCarousel;

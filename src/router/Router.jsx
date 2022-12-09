@@ -15,6 +15,7 @@ import Ejemplo from "../components/Create/editData";
 import Createapp from "../components/Create/editData";
 import Stars from "../components/ratingStars/Stars";
 import CommentBox from "../components/ratingStars/CommentBox";
+import Comparation from "../components/vistas/comparationPage/Comparation"
 import { Rank } from "../components/Rank/Rank";
 
 
@@ -37,7 +38,7 @@ const Router = () =>{
             <Route path="/Createapp" element= {<Createapp/>}/>
             <Route path="/Stars" element= {<Stars/>}/>
             <Route path="/CommentBox" element= {<CommentBox/>}/>
-            
+            <Route path="/Comparation" element= {<Comparation/>}/>
             <Route path="/Createapp" element= {<Ejemplo/>}/>
             <Route path="/companys/:id" element= {<Companys/>} />
             <Route path="/Rank" element= {<Rank/>} />

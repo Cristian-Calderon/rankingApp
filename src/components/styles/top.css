@@ -216,5 +216,28 @@ box-shadow: 1px 1px 8px 2px #2B6C7E;
 }
 .img-carousel{
     height: 200px;
-    width: 200px;
+    width: 50px;
+}
+.link-carousel{
+  text-decoration: none;
+}
+.carousel-main{
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+/*responsive carousel*/
+
+@media screen and (min-width:768px){
+    .carousel-main{
+        width: 60%;
+        margin-left: 150px;
+    }
+}
+@media screen and (min-width:1024px){
+    .carousel-main{
+        width: 60%;
+        margin-left: 190px;
+    }
 }

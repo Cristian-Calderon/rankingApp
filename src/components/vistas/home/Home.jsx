@@ -22,6 +22,7 @@ export const Home = () => {
           <Link to="/Top"><button className="btn-apps">Top Apps</button></Link><br />
           <Link to="/Medium"><button className="btn-apps">Medium Apps</button></Link><br />
           <Link to="/Worst"><button className="btn-apps">Worst Apps</button></Link><br />
+          <Link to="/comparation"><button className="btn-apps">Company Comparator</button></Link><br />
           </div>
           <div className='circle-1'></div>
           <div className='circle-2'></div>

@@ -1,12 +1,8 @@
 import React from "react";
-import "../style/companys.css";
-
-
-import Stars from "../ratingStars/Stars";
-import CommentBox from "../ratingStars/CommentBox";
-
+import "./companys.css";
+import Stars from "./ratingStars/Stars";
+import CommentBox from "./ratingStars/CommentBox";
 import { useParams } from "react-router-dom";
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -15,6 +11,7 @@ export const Companys = () => {
     const petition = await axios.get(`http://localhost:3000/posts/${id}`);
     state(petition.data);
   };
+
   const [detail, setDetail] = useState(null);
 
   const params = useParams()
@@ -28,20 +25,22 @@ export const Companys = () => {
         <div className="companys">
           <div className="container">
             <div className="description-companys">
-             
               <img className="imgCompany" src={detail.logo} alt="pag" />
               <div className="pding">
                 <p>Name: {detail.nombre}</p>
-                <p>Description: {detail.comentario}</p>
-               
+                <p>Ranking: {detail.ranking}</p>
+                <p>Comment: {detail.comentario}</p>
               </div>
             </div>
+
             <div className="star-cont">
               <Stars />
             </div>
+
             <div className="parragraph-comment">
               <CommentBox />
             </div>
+            
           </div>
         </div>
       ) : (

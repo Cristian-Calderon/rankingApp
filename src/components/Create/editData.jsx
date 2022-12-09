@@ -4,8 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+<<<<<<< HEAD
 import '../style/top.css';
 import './addapp.css';
+=======
+import '../styles/top.css'
+import X from '../../assets/img/x.svg'
+>>>>>>> 4cce555bd8a7862adf5d0ac24ec41c7e0f37c1fc
 import '../../index.css';
 import { Button, ButAdd, ButEdit, ButDelete, ButCancel } from '../style/buttons.js';
 
@@ -133,12 +138,39 @@ console.log(this.state.form);
 
 {/* con bootstrap reformulamos un form/modal para crear una nueva app */}
     <Modal isOpen={this.state.Insertar}>
+<<<<<<< HEAD
       <ModalHeader className="form" style={{display: 'block'}}>
         <div className='formhead'>
           <h3 className='title'>Create your app</h3>
           <ButEdit className="btn btn" id="x" onClick={()=>this.Insertar()}>x</ButEdit>
         </div>
       </ModalHeader>
+=======
+                <ModalHeader className="form" style={{display: 'block'}}>
+                <div className='formhead'>
+                  <h3 className='title'>Create your app</h3>
+                  <button className="btn btn"  style={{float: 'right'}} id="x" onClick={()=>this.Insertar()}><img  src={X}  /></button> 
+                </div>
+                </ModalHeader>
+                <ModalBody className="form">
+                  <div className="form-group">
+                    <label htmlFor="id">ID</label>
+                    <input className="form-control" type="text" name="id" id="id" readOnly onChange={this.handleChange} value={form?form.id: this.state.data.length+1}/>
+                    <br />
+                    <label htmlFor="nombre">Name</label>
+                    <input className="form-control" type="text" name="nombre" id="nombre" onChange={this.handleChange} value={form?form.nombre: ''}/>
+                    <br />
+                    <label htmlFor="nombre">Logo</label>
+                    <input className="form-control" type="text" name="logo" id="logo" onChange={this.handleChange} value={form?form.logo: ''}/>
+                    <br />
+                    <label htmlFor="ranking">Ranking</label>
+                    <input className="form-control" type="text" name="ranking" id="ranking" onChange={this.handleChange} value={form?form.ranking:''}/>
+                    <br />
+                    <label htmlFor="ranking">Comment</label>
+                    <input className="form-control" type="text" name="comentario" id="comentario" onChange={this.handleChange} value={form?form.comentario:''}/>
+                  </div>
+                </ModalBody>
+>>>>>>> 4cce555bd8a7862adf5d0ac24ec41c7e0f37c1fc
 
       <ModalBody className="form">
         <div className="form-group">

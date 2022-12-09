@@ -25,7 +25,7 @@ function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel className="carousel-main" activeIndex={index} onSelect={handleSelect}>
               {posts.map((post) => {
           return(
       <Carousel.Item>
@@ -33,9 +33,10 @@ function ControlledCarousel() {
             className="d-block w-100 img-carousel"
             alt="Second slide"
           />
-        <Carousel.Caption>
-          <div key={post.id} className='best-apps'>
-            <a href={`/companys/${post.id}`}>{post.nombre}</a><br />
+          <br/>
+        <Carousel.Caption className="best-apps-2">
+          <div key={post.id} className='best-apps-2'>
+            <a className="link-carousel" href={`/companys/${post.id}`}>{post.nombre}</a><br />
             <span>{post.ranking}</span>
           </div>
         </Carousel.Caption> 
